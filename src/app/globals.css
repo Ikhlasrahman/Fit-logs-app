@@ -5,3 +5,7 @@
   --font-inter: "Inter", sans-serif;
   --font-oswald: "0swald", sans-serif;
 }
+
+body{
+background-color: black;
+}

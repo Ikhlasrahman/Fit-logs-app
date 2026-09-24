@@ -3,17 +3,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-interface IWorkoutCardProps{
-library:IWorkout;
+interface IWorkoutCardProps {
+    library: IWorkout;
 }
 
 const LibraryCard = ({ library }: IWorkoutCardProps) => {
     return (
-        <div>
-            <Link href={'/'}
-
-                className="overflow-hidden rounded-xl border border-[#2D313B] bg-[#0C0D10]"
-            >
+        <div className="overflow-hidden rounded-xl border border-[#20242E] bg-[#222630] hover:border-[#CCFF00]">
+            <Link href={'/'} >
 
                 {/* Image */}
                 <div className="aspect-[1.8/1] w-full overflow-hidden">
@@ -52,7 +49,7 @@ const LibraryCard = ({ library }: IWorkoutCardProps) => {
                     </p>
 
                     {/* Divider */}
-                    <div className="my-4 h-px bg-[#1C1F26]" />
+                    <div className="my-4 h-px bg-[#9ca3af2d]" />
 
                     {/* Meta information */}
                     <div className="flex items-center gap-4 font-inter text-xs text-[#9CA3AF]">

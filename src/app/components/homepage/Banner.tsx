@@ -5,7 +5,7 @@ import Link from "next/link";
 const BannerSection = () => {
     return (
         <section className="px-4 py-6 sm:px-6 lg:px-8">
-            <div className="mx-auto grid w-full max-w-7xl items-center overflow-hidden rounded-2xl border border-[#1C1F26] bg-[#0C0D10] md:grid-cols-2">
+            <div className="mx-auto grid w-full max-w-7xl items-center overflow-hidden rounded-2xl border border-[#222630] bg-[#15171D] md:grid-cols-2">
 
                 {/* Content */}
                 <div className="flex flex-col justify-center px-6 py-12 sm:px-10 sm:py-16 lg:px-12 lg:py-20">
