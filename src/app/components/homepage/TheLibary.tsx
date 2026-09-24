@@ -1,7 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
-import LibraryCard from "../shared/LibraryCard";
 import { IWorkout } from "@/types/library.type";
+import LibraryCard from "../shared/LibraryCard";
 
 
 const getLibaries = async () => {
@@ -13,7 +11,7 @@ const getLibaries = async () => {
 const TheLibary = async () => {
 
     const libraryData = await getLibaries();
-    console.log(libraryData, 'LibraryData')
+
 
     return (
         <section className="px-4 py-10 sm:px-6 lg:px-8">
@@ -33,7 +31,7 @@ const TheLibary = async () => {
                 {/* Workout Grid */}
                 <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
 
-                    {libraryData.map((library: IWorkout,ind:number) => {
+                    {libraryData.map((library: IWorkout, ind: number) => {
                         return <LibraryCard key={library.id} library={library} />
                     }
 

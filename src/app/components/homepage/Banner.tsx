@@ -32,7 +32,7 @@ const BannerSection = () => {
                     {/* CTA */}
                     <div className="mt-7 sm:mt-8">
                         <Link
-                            href="/workouts"
+                            href="/"
                             className="inline-flex items-center justify-center rounded-lg bg-[#CCFF00] px-6 py-3.5 font-inter text-sm font-bold uppercase text-black transition hover:bg-[#b8ed00]"
                         >
                             Browse Workouts
