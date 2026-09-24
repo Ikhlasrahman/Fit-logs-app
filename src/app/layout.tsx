@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Oswald } from "next/font/google";
 import Footer from "./components/Footer";
+import BannerSection from "./components/homepage/Banner";
 import Navbar from "./components/Navbar";
 import "./globals.css";
 
@@ -28,8 +29,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col">
         <div>
-          {children}
+
           <Navbar />
+          <BannerSection />
+          {children}
           <Footer />
         </div>
 
