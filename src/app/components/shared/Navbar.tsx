@@ -18,7 +18,7 @@ export default function Navbar() {
                 {/* Navigation */}
                 <div className="hidden items-center sm:flex">
                     <Link
-                        href="/workouts"
+                        href="/"
                         className="rounded-full bg-[#1A2312] px-4 py-1.5 font-inter text-xs font-semibold leading-4 text-[#CCFF00]"
                     >
                         Workouts
