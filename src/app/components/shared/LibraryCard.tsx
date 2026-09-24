@@ -55,20 +55,20 @@ const LibraryCard = ({ library }: IWorkoutCardProps) => {
                     <div className="flex items-center gap-4 font-inter text-xs text-[#9CA3AF]">
 
                         {/* Duration */}
-                        <div className="flex items-center gap-1.5">
-                            <span>◷</span>
+                        <div className="flex items-center gap-1.5]">
+                            <span className="text-[#C2F800]">◷</span>
                             <span>{library.duration} min</span>
                         </div>
 
                         {/* Calories */}
                         <div className="flex items-center gap-1.5">
-                            <span>♥</span>
+                            <span className="text-[#C2F800]">♥</span>
                             <span>{library.caloriesBurned} kcal</span>
                         </div>
 
                         {/* Rating */}
                         <div className="flex items-center gap-1.5">
-                            <span className="text-[#9CA3AF]">☆</span>
+                            <span className="text-[#C2F800]">☆</span>
                             <span>{library.rating}</span>
                         </div>
 
