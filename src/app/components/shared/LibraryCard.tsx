@@ -10,7 +10,7 @@ interface IWorkoutCardProps {
 const LibraryCard = ({ library }: IWorkoutCardProps) => {
     return (
         <div className="overflow-hidden rounded-xl border border-[#20242E] bg-[#222630] hover:border-[#CCFF00]">
-            <Link href={'/'} >
+            <Link href={`/workouts/${library.id}`} >
 
                 {/* Image */}
                 <div className="aspect-[1.8/1] w-full overflow-hidden">

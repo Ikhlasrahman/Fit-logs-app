@@ -1,6 +1,14 @@
 import React from 'react';
 
-const WorkOutDetailspage = () => {
+interface IWorkOutDetailspageProps{
+params:Promise<{
+    id:string;
+}>;
+}
+const WorkOutDetailspage = async ({params}:IWorkOutDetailspageProps) => {
+    
+    const {id} = await params;
+    console.log(params)
     return (
         <div>
             
