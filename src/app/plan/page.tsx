@@ -16,7 +16,7 @@ const PlanPages = () => {
         <main className="min-h-screen bg-black px-6 py-10">
             <div className="mx-auto w-full max-w-7xl">
 
-                {/* ================= HEADER ================= */}
+                {/*  HEADER  */}
 
                 <div>
                     <h1 className="font-oswald text-3xl font-bold uppercase leading-9 text-white">
@@ -29,7 +29,7 @@ const PlanPages = () => {
                 </div>
 
 
-                {/* ================= STATS ================= */}
+                {/*  STATS  */}
 
                 <div className="mt-6 grid grid-cols-1 rounded-2xl border border-[#374151] bg-[#13161D] px-6 py-8 sm:grid-cols-3">
 
@@ -82,13 +82,13 @@ const PlanPages = () => {
                 </div>
 
 
-                {/* ================= TABS ================= */}
+                {/*  TABS  */}
 
                 <div className="relative mt-10">
 
                     <div className="tabs w-full">
 
-                        {/* ================= TODAY'S PLAN ================= */}
+                        {/*  TODAY'S PLAN  */}
 
                         <input
                             type="radio"
@@ -221,7 +221,7 @@ const PlanPages = () => {
                         </div>
 
 
-                        {/* ================= SAVED ================= */}
+                        {/*  SAVED  */}
 
                         <input
                             type="radio"
@@ -355,7 +355,7 @@ const PlanPages = () => {
                     </div>
 
 
-                    {/* ================= SORT BY ================= */}
+                    {/*  SORT BY  */}
 
                     <div className="absolute right-0 top-0 flex items-center gap-4">
 
