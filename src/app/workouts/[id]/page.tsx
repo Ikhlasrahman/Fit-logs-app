@@ -1,6 +1,7 @@
+import AddTodaysPlanButton from "@/app/components/workoutDetailsAction/AddTodaysPlanButton";
 import { IWorkout } from "@/types/library.type";
 import Image from "next/image";
-import { CiBookmark, CiCalendar } from "react-icons/ci";
+import { CiBookmark } from "react-icons/ci";
 
 
 interface IWorkOutDetailspageProps {
@@ -20,7 +21,7 @@ const WorkOutDetailspage = async ({ params }: IWorkOutDetailspageProps) => {
     const workoutData = await getLibaries();
     const workout = workoutData.find(
         (liabary: IWorkout) => String(liabary.id) == String(id),
-    );
+    ) as IWorkout;
 
     console.log(workout)
 
@@ -155,10 +156,7 @@ const WorkOutDetailspage = async ({ params }: IWorkOutDetailspageProps) => {
 
                     {/* BUTTONS */}
                     <div className="mt-8 flex gap-4">
-                        <button className="flex items-center gap-2 rounded-xl bg-[#CCFF00] px-6 py-3 text-sm font-semibold text-neutral-900">
-                            <CiCalendar className="text-lg" />
-                            Add today's plan
-                        </button>
+                        <AddTodaysPlanButton workout={workout} />
 
                         <button className="flex items-center gap-2 rounded-xl border border-gray-700 px-6 py-3 text-sm font-medium text-gray-200">
                             <CiBookmark className="text-lg" />
