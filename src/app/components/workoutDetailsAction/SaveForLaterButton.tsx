@@ -16,7 +16,7 @@ const SaveForLaterButton = ({ workout }: AddSavePlanButtonProps) => {
 
     const handlesetSaved = () => {
         setSaved([...saved, workout]);
-        toast(`You have saved "${workout.name}"`)
+        toast.success(`You have saved "${workout.name}"`)
     };
 
     return (
