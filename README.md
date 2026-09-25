@@ -1,3 +1,32 @@
+# FitLog
+
+## Project Description
+
+FitLog is a workout planning application that allows users to browse workouts, view detailed workout information, create a daily workout plan, and save workouts for later.
+
+## Technologies Used
+
+- Next.js
+- TypeScript
+- Tailwind CSS
+- daisyUI
+- React Icons
+- React Toastify
+- Context API
+- REST API
+
+## Features
+
+- **Workout Library** — Browse workouts with information such as duration, difficulty, equipment, calories, and rating.
+- **Workout Details** — View detailed information, descriptions, and instructions for individual workouts.
+- **Today's Plan** — Add workouts to a personalized daily workout plan.
+- **Save for Later** — Save workouts to access them later.
+- **Plan Dashboard** — View Today's Plan and Saved workouts using separate tabs.
+- **Workout Statistics** — View total exercises, workout minutes, and calories.
+- **Workout Sorting** — Sort workouts by duration, calories, or rating.
+- **Duplicate Prevention** — Prevent the same workout from being added multiple times.
+- **Toast Notifications** — Get feedback when workouts are added, saved, or already exist in a list.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
