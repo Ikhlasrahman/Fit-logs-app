@@ -15,6 +15,11 @@ const AddTodaysPlanButton = ({ workout, }: AddTodaysPlanButtonProps) => {
 
 
     const handlesetPlan = () => {
+        const alreadyInPlan = plan.some((item)=> item.id ===workout.id);
+        if(alreadyInPlan){
+            toast.warning((`"${workout.name}" Already In Plan`))
+            return
+        }
         setPlan([...plan, workout]);
         toast.success(`You have add "${workout.name}"`)
     };

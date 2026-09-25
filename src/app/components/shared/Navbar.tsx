@@ -3,10 +3,12 @@ import logo from "@/assets/logo.png";
 import { PlanContext } from "@/context/PlanContext";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useContext } from "react";
 
 export default function Navbar() {
     const { plan, saved } = useContext(PlanContext)
+    const pathname = usePathname();
     return (
         <header className="w-full border-b border-[#1C1F26] bg-[#000000]/95 backdrop-blur-[2px]">
             <nav className="mx-auto flex h-20 w-full max-w-[1280px] items-center justify-between px-4 sm:px-6">
@@ -22,18 +24,26 @@ export default function Navbar() {
                 {/* Navigation */}
                 <div className="hidden items-center sm:flex">
                     <Link
-                        href="/"
-                        className="rounded-full bg-[#1A2312] px-4 py-1.5 font-inter text-xs font-semibold leading-4 text-[#CCFF00]"
-                    >
-                        Workouts
-                    </Link>
+        href="/"
+        className={`rounded-full px-4 py-1.5 font-inter text-xs font-semibold leading-4 ${
+            pathname === "/"
+                ? "bg-[#1A2312] text-[#CCFF00]"
+                : "text-[#9CA3AF] hover:text-white"
+        }`}
+    >
+        Workouts
+    </Link>
 
                     <Link
-                        href="/plan"
-                        className="px-4 py-1.5 font-inter text-xs font-medium leading-4 text-[#9CA3AF] transition-colors hover:text-white"
-                    >
-                        My Plan
-                    </Link>
+        href="/plan"
+        className={`rounded-full px-4 py-1.5 font-inter text-xs font-medium leading-4 ${
+            pathname === "/plan"
+                ? "bg-[#1A2312] text-[#CCFF00]"
+                : "text-[#9CA3AF] hover:text-white"
+        }`}
+    >
+        My Plan
+    </Link>
                 </div>
 
                 {/* Stats */}

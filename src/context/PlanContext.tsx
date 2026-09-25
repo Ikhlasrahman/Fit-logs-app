@@ -1,13 +1,14 @@
 "use client";
 import { createContext, ReactNode, useState } from "react";
+import { IWorkout } from "@/types/library.type";
 
 export const PlanContext = createContext({});
 
 
 type PlanContextType = {
-    plan: [];
+    plan: IWorkout[];
     setPlan: React.Dispatch<React.SetStateAction<[]>>;
-    saved: [];
+    saved: IWorkout[];
     setSaved: React.Dispatch<React.SetStateAction<[]>>
 }
 

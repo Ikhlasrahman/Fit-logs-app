@@ -15,9 +15,16 @@ const SaveForLaterButton = ({ workout }: AddSavePlanButtonProps) => {
 
 
     const handlesetSaved = () => {
-        setSaved([...saved, workout]);
-        toast.success(`You have saved "${workout.name}"`)
-    };
+    const alreadySaved = saved.some((item) => item.id === workout.id);
+
+    if (alreadySaved) {
+        toast.warning(`"${workout.name}" Already In Save For Later`);
+        return;
+    }
+
+    setSaved([...saved, workout]);
+    toast.success(`You have saved "${workout.name}"`);
+};
 
     return (
         <button
