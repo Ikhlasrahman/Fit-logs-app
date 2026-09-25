@@ -4,6 +4,7 @@ import { PlanContext } from "@/context/PlanContext";
 import { IWorkout } from "@/types/library.type";
 import { useContext } from "react";
 import { CiBookmark } from "react-icons/ci";
+import { toast } from "react-toastify";
 
 interface AddSavePlanButtonProps {
     workout: IWorkout;
@@ -15,7 +16,7 @@ const SaveForLaterButton = ({ workout }: AddSavePlanButtonProps) => {
 
     const handlesetSaved = () => {
         setSaved([...saved, workout]);
-        alert(`You have saved "${workout.name}"`)
+        toast(`You have saved "${workout.name}"`)
     };
 
     return (

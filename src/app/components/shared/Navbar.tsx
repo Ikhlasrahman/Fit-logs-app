@@ -40,26 +40,29 @@ export default function Navbar() {
                 <div className="flex items-center gap-3 sm:gap-6">
 
                     {/* Plan */}
-                    <div className="flex items-center gap-2">
-                        <span className="hidden font-inter text-xs font-medium leading-4 text-[#D1D5DB] xs:inline sm:inline">
-                            Plan
-                        </span>
+                    <Link href="/plan">
+                        <div className="flex items-center gap-2">
+                            <span className="hidden font-inter text-xs font-medium leading-4 text-[#D1D5DB] xs:inline sm:inline">
+                                Plan
+                            </span>
 
-                        <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#CCFF00] font-inter text-xs font-bold leading-4 text-black">
-                            {plan.length}
-                        </span>
-                    </div>
-
+                            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#CCFF00] font-inter text-xs font-bold leading-4 text-black">
+                                {plan.length}
+                            </span>
+                        </div>
+                    </Link>
                     {/* Saved */}
-                    <div className="flex items-center gap-2">
-                        <span className="hidden font-inter text-xs font-medium leading-4 text-[#9CA3AF] sm:inline">
-                            Saved
-                        </span>
+                    <Link href="/plan">
+                        <div className="flex items-center gap-2">
+                            <span className="hidden font-inter text-xs font-medium leading-4 text-[#9CA3AF] sm:inline">
+                                Saved
+                            </span>
 
-                        <span className="flex h-5 w-5 items-center justify-center rounded-full border border-[#2D313B] font-inter text-xs font-medium leading-4 text-[#D1D5DB]">
-                            {saved.length}
-                        </span>
-                    </div>
+                            <span className="flex h-5 w-5 items-center justify-center rounded-full border border-[#2D313B] font-inter text-xs font-medium leading-4 text-[#D1D5DB]">
+                                {saved.length}
+                            </span>
+                        </div>
+                    </Link>
 
                 </div>
             </nav>

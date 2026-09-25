@@ -4,6 +4,7 @@ import { PlanContext } from "@/context/PlanContext";
 import { IWorkout } from "@/types/library.type";
 import { useContext } from "react";
 import { CiCalendar } from "react-icons/ci";
+import { toast } from "react-toastify";
 
 interface AddTodaysPlanButtonProps {
     workout: IWorkout;
@@ -15,7 +16,7 @@ const AddTodaysPlanButton = ({ workout, }: AddTodaysPlanButtonProps) => {
 
     const handlesetPlan = () => {
         setPlan([...plan, workout]);
-        alert(`You have add "${workout.name}"`)
+        toast.success(`You have add "${workout.name}"`)
     };
 
     return (

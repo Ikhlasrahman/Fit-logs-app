@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Oswald } from "next/font/google";
 
 import PlanProvider from "@/context/PlanContext";
+import { Bounce, ToastContainer } from "react-toastify";
 import Footer from "./components/shared/Footer";
 import Navbar from "./components/shared/Navbar";
 import "./globals.css";
@@ -34,6 +35,19 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             <Navbar />
             {children}
             <Footer />
+            <ToastContainer
+              position="top-right"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick={false}
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="dark"
+              transition={Bounce}
+            />
           </PlanProvider>
         </div>
       </body>
