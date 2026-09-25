@@ -9,6 +9,7 @@ import { useContext, useState } from "react";
 import { CiClock2, CiStar } from "react-icons/ci";
 import { FaCheck, FaFire } from "react-icons/fa6";
 import { FiChevronDown } from "react-icons/fi";
+import { toast } from "react-toastify";
 
 const PlanPages = () => {
     const { plan, saved } = useContext(PlanContext);
@@ -16,6 +17,8 @@ const PlanPages = () => {
         "rating",
     );
     // console.log(sortBy, 'sortby')
+
+
 
     const sortPlan = (workout: IWorkout[]) => {
         const sortedPlans = [...workout];
@@ -31,8 +34,12 @@ const PlanPages = () => {
     const sortedPlan = sortPlan(plan);
     const sortedSaved = sortPlan(saved);
 
-    console.log(sortedPlan, "sortedPlan");
-    console.log(sortedSaved, "sortedSaved");
+    // console.log(sortedPlan, "sortedPlan");
+    // console.log(sortedSaved, "sortedSaved");
+
+    const handledMarkAsDone = () => {
+    toast.success("Marked as done")
+}
 
     return (
         <main className="min-h-screen bg-black px-6 py-10">
@@ -179,6 +186,7 @@ const PlanPages = () => {
                                                 </Link>
 
                                                 <button
+                                                    onClick={handledMarkAsDone}
                                                     type="button"
                                                     className="flex items-center gap-2 rounded-full bg-[#CCFF00] px-5 py-2.5 font-inter text-sm font-semibold text-black transition hover:bg-[#B8EB00]"
                                                 >
@@ -286,9 +294,10 @@ const PlanPages = () => {
                                                     View Details
                                                 </Link>
 
-                                                <button
+                                               <button
                                                     type="button"
                                                     className="flex items-center gap-2 rounded-full bg-[#CCFF00] px-5 py-2.5 font-inter text-sm font-semibold text-black transition hover:bg-[#B8EB00]"
+                                                    onClick={handledMarkAsDone}
                                                 >
                                                     <FaCheck className="text-sm" />
                                                     Mark as Done
