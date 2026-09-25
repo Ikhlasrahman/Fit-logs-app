@@ -4,9 +4,9 @@ import { IWorkout } from "@/types/library.type";
 
 interface PlanContextType  {
     plan: IWorkout[];
-    setPlan: React.Dispatch<React.SetStateAction<[]>>;
+    setPlan: React.Dispatch<React.SetStateAction<IWorkout[]>>;
     saved: IWorkout[];
-    setSaved: React.Dispatch<React.SetStateAction<[]>>
+    setSaved: React.Dispatch<React.SetStateAction<IWorkout[]>>;
 }
 export const PlanContext = createContext<PlanContextType>({
     plan: [],
