@@ -5,8 +5,8 @@ import { useContext } from "react";
 
 const PlanPages = () => {
 
-    const { plan } = useContext(PlanContext)
-    console.log(plan)
+    const { plan, saved } = useContext(PlanContext)
+    console.log(plan, saved, 'Plan', 'Saved')
     return (
 
         <div>

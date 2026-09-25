@@ -1,8 +1,12 @@
+'use client'
 import logo from "@/assets/logo.png";
+import { PlanContext } from "@/context/PlanContext";
 import Image from "next/image";
 import Link from "next/link";
+import { useContext } from "react";
 
 export default function Navbar() {
+    const { plan, saved } = useContext(PlanContext)
     return (
         <header className="w-full border-b border-[#1C1F26] bg-[#000000]/95 backdrop-blur-[2px]">
             <nav className="mx-auto flex h-20 w-full max-w-[1280px] items-center justify-between px-4 sm:px-6">
@@ -42,7 +46,7 @@ export default function Navbar() {
                         </span>
 
                         <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#CCFF00] font-inter text-xs font-bold leading-4 text-black">
-                            0
+                            {plan.length}
                         </span>
                     </div>
 
@@ -53,7 +57,7 @@ export default function Navbar() {
                         </span>
 
                         <span className="flex h-5 w-5 items-center justify-center rounded-full border border-[#2D313B] font-inter text-xs font-medium leading-4 text-[#D1D5DB]">
-                            0
+                            {saved.length}
                         </span>
                     </div>
 

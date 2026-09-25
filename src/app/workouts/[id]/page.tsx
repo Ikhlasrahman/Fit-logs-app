@@ -1,7 +1,7 @@
 import AddTodaysPlanButton from "@/app/components/workoutDetailsAction/AddTodaysPlanButton";
+import SaveForLaterButton from "@/app/components/workoutDetailsAction/SaveForLaterButton";
 import { IWorkout } from "@/types/library.type";
 import Image from "next/image";
-import { CiBookmark } from "react-icons/ci";
 
 
 interface IWorkOutDetailspageProps {
@@ -158,10 +158,7 @@ const WorkOutDetailspage = async ({ params }: IWorkOutDetailspageProps) => {
                     <div className="mt-8 flex gap-4">
                         <AddTodaysPlanButton workout={workout} />
 
-                        <button className="flex items-center gap-2 rounded-xl border border-gray-700 px-6 py-3 text-sm font-medium text-gray-200">
-                            <CiBookmark className="text-lg" />
-                            Save for later
-                        </button>
+                        <SaveForLaterButton workout={workout} />
                     </div>
 
                 </div>
